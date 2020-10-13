@@ -1,0 +1,13 @@
+.App {
+    text-align: center;
+    background-color: rgb(222, 184, 135);
+    height: 750px;
+}
+
+.input {
+    border: solid black;
+    font-size: 40px;
+    color: white;
+    background-color: rgb(219, 189, 148);
+    margin-top: 20%;
+}

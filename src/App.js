@@ -1,26 +1,27 @@
-import React from 'react';
-import logo from './logo.svg';
-import './App.css';
+import React, { useState } from "react";
+import "./style.css";
 
-function App() {
-  return (
-    <div className="App">
-      <header className="App-header">
-        <img src={logo} className="App-logo" alt="logo" />
-        <p>
-          Edit <code>src/App.js</code> and save to reload.
-        </p>
-        <a
-          className="App-link"
-          href="https://reactjs.org"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          Learn React
-        </a>
-      </header>
-    </div>
-  );
+import Input from "./UserInput";
+import Output from "./UserOutput";
+
+export default function App() {
+    let [value, setValue] = useState("");
+    if (value.length <= 50) {
+
+        return ( <
+            div className = "App" >
+            <
+            Input placeholder = "Type Here ! "
+            value = { value }
+            onChange = {
+                ({ target }) => {
+                    setValue(target.value);
+                }
+            }
+            /> <
+            Output value = { value }
+            /> < /
+            div >
+        );
+    }
 }
-
-export default App;
